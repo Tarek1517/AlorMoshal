@@ -2,8 +2,8 @@
 <template>
   <HomeHeroSection />
   <HomeCounterSection />
-  <!-- <HomeProductsSection /> -->
   <HomeCategorySection />
+  <HomeCoursesSection />
   <!-- <HomeAppSection /> -->
   <!-- <HomeBlogSection /> -->
 </template>
