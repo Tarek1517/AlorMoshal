@@ -128,7 +128,7 @@ const menus = [
             <div
               class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg"
             >
-              <Icon name="mdi:school" class="text-2xl text-secondary" />
+              <Icon name="mdi:school" class="text-2xl text-white" />
             </div>
             <div class="flex flex-col">
               <span

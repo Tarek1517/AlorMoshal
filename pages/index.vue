@@ -4,6 +4,7 @@
   <HomeCounterSection />
   <HomeCategorySection />
   <HomeCoursesSection />
-  <!-- <HomeAppSection /> -->
-  <!-- <HomeBlogSection /> -->
+  <HomeInstructorSection />
+  <HomeFAQSection />
+  <HomeBlogSection />
 </template>

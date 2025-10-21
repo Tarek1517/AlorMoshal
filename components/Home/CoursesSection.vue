@@ -119,33 +119,6 @@ const courses = [
 
 const visibleCourses = ref(8);
 const activeCategory = ref("All");
-
-// Extract unique categories
-const categories = [
-  "All",
-  ...new Set(courses.map((course) => course.category)),
-];
-
-const filteredCourses = ref(courses);
-
-const filterCourses = (category) => {
-  activeCategory.value = category;
-  if (category === "All") {
-    filteredCourses.value = courses;
-  } else {
-    filteredCourses.value = courses.filter(
-      (course) => course.category === category
-    );
-  }
-  visibleCourses.value = 6;
-};
-
-const showMore = () => {
-  visibleCourses.value += 3;
-  if (visibleCourses.value >= filteredCourses.value.length) {
-    visibleCourses.value = filteredCourses.value.length;
-  }
-};
 </script>
 
 <template>
@@ -167,7 +140,7 @@ const showMore = () => {
       <!-- Modern Section Header -->
       <div class="text-center mb-16">
         <div
-          class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-primary/35 text-secondary rounded-full text-sm font-medium mb-6 shadow-sm"
+          class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm text-secondary rounded-full text-sm font-medium mb-6 shadow-sm"
         >
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path

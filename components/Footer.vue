@@ -10,7 +10,7 @@
               <div
                 class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg"
               >
-                <Icon name="mdi:school" class="text-2xl text-secondary" />
+                <Icon name="mdi:school" class="text-2xl text-white" />
               </div>
               <div class="flex flex-col">
                 <span
@@ -18,7 +18,7 @@
                 >
                   Alormoshal
                 </span>
-                <span class="text-xs text-secondary -mt-1">LMS Platform</span>
+                <span class="text-xs text-gray-400 -mt-1">LMS Platform</span>
               </div>
             </div>
           </NuxtLink>
