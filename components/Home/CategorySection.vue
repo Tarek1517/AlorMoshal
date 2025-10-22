@@ -1,13 +1,14 @@
 <script setup>
 const categories = [
-  { name: "Web Development", icon: "mdi:code-braces", color: "from-blue-500 to-cyan-500", count: "120" },
-  { name: "Data Science", icon: "mdi:chart-bar", color: "from-green-500 to-emerald-500", count: "85" },
-  { name: "Mobile Apps", icon: "mdi:cellphone", color: "from-purple-500 to-violet-500", count: "67" },
-  { name: "UI/UX Design", icon: "mdi:palette", color: "from-pink-500 to-rose-500", count: "92" },
-  { name: "Digital Marketing", icon: "mdi:bullhorn", color: "from-orange-500 to-amber-500", count: "78" },
-  { name: "Business", icon: "mdi:briefcase", color: "from-indigo-500 to-blue-500", count: "105" },
-  { name: "Photography", icon: "mdi:camera", color: "from-red-500 to-orange-500", count: "54" },
-  { name: "Music", icon: "mdi:music", color: "from-yellow-500 to-orange-500", count: "41" },
+  { name: "বাংলা", icon: "mdi:book-open-page-variant", color: "from-blue-500 to-cyan-500", count: "120" },
+  { name: "ইংরেজি", icon: "mdi:book-open-page-variant", color: "from-green-500 to-emerald-500", count: "85" },
+  { name: "বিসিএস", icon: "mdi:account-tie", color: "from-purple-500 to-violet-500", count: "67" },
+  { name: "শিক্ষক নিয়োগ/নিবন্ধন", icon: "mdi:school", color: "from-pink-500 to-rose-500", count: "92" },
+  { name: "ভর্তি প্রস্তুতি", icon: "mdi:clipboard-list", color: "from-orange-500 to-amber-500", count: "78" },
+  { name: "একাডেমিক স্টাডি", icon: "mdi:palette", color: "from-indigo-500 to-blue-500", count: "105" },
+  { name: "কম্পিউটার ও IT", icon: "mdi:laptop", color: "from-red-500 to-orange-500", count: "54" },
+  { name: "সফট স্কিল ও ক্যারিয়ার", icon: "mdi:briefcase-account", color: "from-teal-500 to-green-400", count: "60" },
+ 
 ];
 </script>
 
@@ -25,15 +26,15 @@ const categories = [
       <div class="text-center mb-16">
         <div class="inline-flex items-center gap-3 mb-6">
           <div class="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          <span class="text-sm font-semibold text-gray-600 tracking-wider">LEARNING PATHS</span>
+          <span class="text-sm font-semibold text-gray-600 tracking-wider">কোর্স ক্যাটেগরিস</span>
           <div class="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
         </div>
 
         <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Explore <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Categories</span>
+          অনুসন্ধান করুন <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">ক্যাটেগরিস</span>
         </h2>
         <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Choose your learning journey from our carefully curated course categories designed for skill mastery
+          আপনার শেখার যাত্রা শুরু করুন আমাদের নির্বাচিত কোর্স ক্যাটেগরিস থেকে যা দক্ষতা অর্জনের জন্য তৈরি।
         </p>
       </div>
 
@@ -69,10 +70,10 @@ const categories = [
             </h3>
             <div class="flex items-center justify-between">
               <span class="text-sm text-gray-500 font-medium">
-                {{ category.count }} Courses
+                {{ category.count }} কোর্স
               </span>
               <div class="flex items-center gap-1 text-primary group-hover:gap-2 transition-all duration-300">
-                <span class="text-sm font-semibold">Explore</span>
+                <span class="text-sm font-semibold">অনুসন্ধান করুন</span>
                 <Icon name="heroicons:arrow-right" class="w-4 h-4" />
               </div>
             </div>
@@ -87,10 +88,10 @@ const categories = [
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
+
 
 <style scoped>
 /* Custom animations for cards */

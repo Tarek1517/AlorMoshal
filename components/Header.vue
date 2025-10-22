@@ -5,7 +5,6 @@
         <nav class="relative">
             <div class="">
                 <NavBar />
-                
             </div>
         </nav>
     </header>

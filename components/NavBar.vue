@@ -13,58 +13,19 @@ const languages = [
 
 const menus = [
   {
-    title: "Home",
+    title: "হোম",
     icon: "mdi:home",
     items: [],
   },
   {
-    title: "Courses",
+    title: "কোর্সসমূহ",
     items: [
-      {
-        title: "Web Development",
-        icon: "mdi:web",
-        subItems: [
-          "Frontend",
-          "Backend",
-          "Full Stack",
-          "React",
-          "Vue",
-          "Angular",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop",
-      },
-      {
-        title: "Data Science",
-        icon: "mdi:chart-bar",
-        subItems: [
-          "Python",
-          "Machine Learning",
-          "Deep Learning",
-          "Data Analysis",
-        ],
-        image:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      },
-      {
-        title: "Mobile Development",
-        icon: "mdi:cellphone",
-        subItems: ["Android", "iOS", "Flutter", "React Native"],
-        image:
-          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-      },
-      {
-        title: "Cloud & DevOps",
-        icon: "mdi:cloud",
-        subItems: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-        image:
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
-      },
+     
     ],
   },
 
   {
-    title: "Resources",
+    title: "আমাদের সম্পর্কে",
     items: [
       {
         title: "Learning Paths",
@@ -89,29 +50,8 @@ const menus = [
     ],
   },
   {
-    title: "About",
-    items: [
-      {
-        title: "Our Story",
-        icon: "mdi:history",
-        subItems: ["Mission & Vision", "Team", "Achievements"],
-      },
-      {
-        title: "Instructors",
-        icon: "mdi:account-tie",
-        subItems: ["Become Instructor", "Instructor Resources"],
-      },
-      {
-        title: "Careers",
-        icon: "mdi:briefcase",
-        subItems: ["Open Positions", "Culture", "Benefits"],
-      },
-      {
-        title: "Contact",
-        icon: "mdi:phone",
-        subItems: ["Support", "Partnerships", "Feedback"],
-      },
-    ],
+    title: "যোগাযোগ করুন",
+    
   },
 ];
 </script>
@@ -134,9 +74,9 @@ const menus = [
               <span
                 class="text-2xl font-bold bg-primary bg-clip-text text-transparent"
               >
-                Alormoshal
+                আলোর মশাল
               </span>
-              <span class="text-xs text-secondary -mt-1">LMS Platform</span>
+              <span class="text-xs text-secondary -mt-1">এলএমএস প্ল্যাটফর্ম</span>
             </div>
           </div>
         </NuxtLink>
@@ -152,7 +92,7 @@ const menus = [
           >
             <!-- Home Button (Simple Link) -->
             <NuxtLink
-              v-if="menu.title === 'Home'"
+              v-if="menu.title === 'হোম'"
               to="/"
               class="px-6 py-3 text-gray-700 font-semibold hover:text-blue-600 transition-all duration-300 flex items-center group relative"
             >
@@ -188,7 +128,7 @@ const menus = [
               <input
                 v-model="searchQuery"
                 type="text"
-                placeholder="Search courses, tutorials..."
+                placeholder="কোর্স, টিউটোরিয়াল খুঁজুন..."
                 class="pl-12 pr-5 py-3 border-0 bg-gray-50 rounded-full focus:ring-2 focus:ring-blue-500/50 focus:bg-white w-64 transition-all duration-300 group-hover:w-72 focus:w-72 shadow-inner"
               />
               <div
@@ -248,13 +188,13 @@ const menus = [
               to="/login"
               class="px-6 py-2.5 text-white font-semibold bg-primary transition-colors rounded-full "
             >
-              Login
+              লগইন
             </NuxtLink>
             <NuxtLink
               to="/register"
               class="px-6 py-2.5 text-white font-semibold bg-secondary transition-colors rounded-full "
             >
-              Register
+              নিবন্ধন করুন
             </NuxtLink>
           </div>
 

@@ -18,7 +18,7 @@ const props = defineProps({
           class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1"
         >
           <Icon name="heroicons:star" class="w-3 h-3" />
-          Featured
+          ফিচারড
         </div>
       </div>
 
@@ -31,7 +31,7 @@ const props = defineProps({
         </button>
       </div>
 
-      <!-- Course Image with Gradient Overlay -->
+      <!-- Course Image -->
       <div class="relative h-48 overflow-hidden">
         <img
           :src="course.image"
@@ -39,18 +39,16 @@ const props = defineProps({
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
         />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
-        ></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
         <!-- Level Badge -->
         <div class="absolute bottom-4 left-4">
           <span
             :class="[
               'px-3 py-1.5 text-xs font-bold text-white rounded-full shadow-lg backdrop-blur-sm',
-              course.level === 'Beginner'
+              course.level === 'শুরুতি'
                 ? 'bg-green-500'
-                : course.level === 'Intermediate'
+                : course.level === 'মধ্যবর্তী'
                 ? 'bg-yellow-500'
                 : 'bg-red-500',
             ]"
@@ -100,14 +98,10 @@ const props = defineProps({
           <div class="flex items-center gap-2">
             <div class="flex items-center gap-1">
               <Icon name="heroicons:star" class="w-4 h-4 text-yellow-400" />
-              <span class="text-sm font-bold text-gray-900">{{
-                course.rating || 4.8
-              }}</span>
+              <span class="text-sm font-bold text-gray-900">{{ course.rating || 4.8 }}</span>
             </div>
             <span class="text-gray-400">•</span>
-            <span class="text-sm text-gray-600"
-              >{{ course.students || "1.2k" }} students</span
-            >
+            <span class="text-sm text-gray-600">{{ course.students || "1.2k" }} শিক্ষার্থী</span>
           </div>
           <div
             class="text-sm font-semibold text-gray-900 bg-gray-100 px-3 py-1 rounded-full"
@@ -121,15 +115,13 @@ const props = defineProps({
           class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100"
         >
           <div class="flex items-baseline gap-1">
-            <span class="text-2xl font-bold text-gray-900">{{
-              course.price
-            }}</span>
-            <span class="text-sm text-gray-500 line-through">$99</span>
+            <span class="text-2xl font-bold text-gray-900">{{ course.price }}</span>
+            <span class="text-sm text-gray-500 line-through">৳999</span>
           </div>
           <button
             class="bg-secondary text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 group-hover:gap-3"
           >
-            Enroll Now
+            এখন ভর্তি হোন
             <Icon
               name="heroicons:arrow-right"
               class="w-4 h-4 transition-transform group-hover:translate-x-0.5"
@@ -138,7 +130,7 @@ const props = defineProps({
         </div>
       </div>
 
-      <!-- Hover Effect Border -->
+      <!-- Hover Border -->
       <div
         class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-blue-200 transition-all duration-500 pointer-events-none"
       ></div>

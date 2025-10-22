@@ -11,8 +11,8 @@
           />
           <!-- Floating Element -->
           <div class="absolute -bottom-4 -right-4 bg-secondary text-white p-6 rounded-2xl shadow-xl">
-            <div class="text-2xl font-bold">98%</div>
-            <div class="text-sm">Success Rate</div>
+            <div class="text-2xl font-bold">৯৮%</div>
+            <div class="text-sm">সাফল্যের হার</div>
           </div>
         </div>
 
@@ -20,11 +20,11 @@
         <div>
           <div class="mb-12">
             <h2 class="text-5xl font-bold text-gray-900 mb-6">
-              Common
-              <span class="text-secondary">Questions</span>
+              সাধারণ
+              <span class="text-secondary">প্রশ্নসমূহ</span>
             </h2>
             <p class="text-lg text-gray-600">
-              Everything you need to know about our platform and courses.
+              আমাদের প্ল্যাটফর্ম এবং কোর্স সম্পর্কিত সমস্ত তথ্য এখানে পাবেন।
             </p>
           </div>
 
@@ -69,28 +69,28 @@ import { ref } from 'vue';
 
 const faqs = ref([
   {
-    question: "How long do I have access to the courses?",
-    answer: "You get lifetime access to all course materials, including future updates and additional content.",
+    question: "আমি কতদিন পর্যন্ত কোর্সগুলোতে প্রবেশাধিকার পাবো?",
+    answer: "আপনি সব কোর্সের সামগ্রী আজীবন ব্যবহার করতে পারবেন, এতে ভবিষ্যতের আপডেট এবং অতিরিক্ত কনটেন্টও অন্তর্ভুক্ত।",
     isOpen: false
   },
   {
-    question: "Are there any prerequisites for the courses?",
-    answer: "Most beginner courses require no prior experience. Advanced courses may have specific prerequisites listed in the course description.",
+    question: "কোর্সের জন্য কোনো পূর্বশর্ত আছে কি?",
+    answer: "বেশিরভাগ প্রাথমিক কোর্সের জন্য কোনো পূর্ব অভিজ্ঞতার প্রয়োজন নেই। উন্নত কোর্সের ক্ষেত্রে নির্দিষ্ট পূর্বশর্ত কোর্সের বর্ণনায় উল্লেখ থাকে।",
     isOpen: false
   },
   {
-    question: "Can I download the course videos?",
-    answer: "Yes, you can download videos for offline viewing through our mobile apps. Some courses also provide downloadable resources and code files.",
+    question: "আমি কোর্সের ভিডিও ডাউনলোড করতে পারবো কি?",
+    answer: "হ্যাঁ, আপনি আমাদের মোবাইল অ্যাপ ব্যবহার করে অফলাইন ভিডিও দেখতে ডাউনলোড করতে পারবেন। কিছু কোর্সে অতিরিক্ত রিসোর্স এবং কোড ফাইলও ডাউনলোড করা যায়।",
     isOpen: false
   },
   {
-    question: "Do you offer team or enterprise plans?",
-    answer: "Yes, we offer special pricing and features for teams and organizations. Contact our sales team for custom enterprise solutions.",
+    question: "আপনারা টিম বা এন্টারপ্রাইজ প্ল্যান অফার করেন কি?",
+    answer: "হ্যাঁ, আমরা টিম এবং প্রতিষ্ঠানগুলোর জন্য বিশেষ মূল্য এবং ফিচার অফার করি। কাস্টম এন্টারপ্রাইজ সমাধানের জন্য আমাদের সেলস টিমের সাথে যোগাযোগ করুন।",
     isOpen: false
   },
   {
-    question: "What's your refund policy?",
-    answer: "We offer a 30-day money-back guarantee for all courses. If you're not satisfied, you can request a full refund within 30 days of purchase.",
+    question: "আপনার রিফান্ড নীতি কী?",
+    answer: "আমরা সব কোর্সের জন্য ৩০ দিনের মানি-ব্যাক গ্যারান্টি প্রদান করি। যদি আপনি সন্তুষ্ট না হন, তাহলে ক্রয়ের ৩০ দিনের মধ্যে পুরো অর্থ ফেরতের অনুরোধ করতে পারেন।",
     isOpen: false
   }
 ]);

@@ -1,116 +1,116 @@
 <script setup>
 import { ref } from "vue";
 
-// Courses data with real image URLs
+// Courses data in Bangla with relevant categories
 const courses = [
   {
     id: 1,
-    title: "Vue.js Fundamentals",
-    category: "Web Development",
-    instructor: "John Doe",
+    title: "বাংলা ব্যাকরণ ও সাহিত্য",
+    category: "বাংলা",
+    instructor: "মোঃ রহমান",
     image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$49",
-    duration: "6 hours",
-    level: "Beginner",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳499",
+    duration: "8 ঘন্টা",
+    level: "শুরুতি",
     rating: 4.8,
     students: 1245,
     featured: true,
   },
   {
     id: 2,
-    title: "Advanced React",
-    category: "Web Development",
-    instructor: "Jane Smith",
+    title: "ইংরেজি ভাষার দক্ষতা উন্নয়ন",
+    category: "ইংরেজি",
+    instructor: "জেন স্মিথ",
     image:
-      "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$59",
-    duration: "8 hours",
-    level: "Advanced",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳599",
+    duration: "10 ঘন্টা",
+    level: "মধ্যবর্তী",
     rating: 4.9,
     students: 892,
     featured: true,
   },
   {
     id: 3,
-    title: "Python for Data Science",
-    category: "Data Science",
-    instructor: "Alice Johnson",
+    title: "বিসিএস প্রস্তুতি কোর্স",
+    category: "বিসিএস",
+    instructor: "আলিস জনসন",
     image:
-      "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$69",
-    duration: "10 hours",
-    level: "Intermediate",
+      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳699",
+    duration: "12 ঘন্টা",
+    level: "উন্নত",
     rating: 4.7,
     students: 2103,
     featured: false,
   },
   {
     id: 4,
-    title: "UI/UX Design Essentials",
-    category: "Design",
-    instructor: "Mark Lee",
+    title: "শিক্ষক নিয়োগ/নিবন্ধন প্রস্তুতি",
+    category: "শিক্ষক নিয়োগ/নিবন্ধন",
+    instructor: "মার্ক লি",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$39",
-    duration: "5 hours",
-    level: "Beginner",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳549",
+    duration: "9 ঘন্টা",
+    level: "মধ্যবর্তী",
     rating: 4.6,
     students: 1567,
     featured: false,
   },
   {
     id: 5,
-    title: "Machine Learning Mastery",
-    category: "AI & ML",
-    instructor: "Emma Davis",
+    title: "ভর্তি প্রস্তুতি বিশেষ কোর্স",
+    category: "ভর্তি প্রস্তুতি",
+    instructor: "এমা ডেভিস",
     image:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$79",
-    duration: "12 hours",
-    level: "Advanced",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳399",
+    duration: "6 ঘন্টা",
+    level: "শুরুতি",
     rating: 4.9,
     students: 987,
     featured: true,
   },
   {
     id: 6,
-    title: "Digital Marketing 101",
-    category: "Marketing",
-    instructor: "Tom Brown",
+    title: "একাডেমিক স্টাডি ও নোটস",
+    category: "একাডেমিক স্টাডি",
+    instructor: "টম ব্রাউন",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$29",
-    duration: "4 hours",
-    level: "Beginner",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳349",
+    duration: "5 ঘন্টা",
+    level: "শুরুতি",
     rating: 4.5,
     students: 3102,
     featured: false,
   },
   {
     id: 7,
-    title: "Fullstack Web Development",
-    category: "Web Development",
-    instructor: "Sara Wilson",
+    title: "কম্পিউটার ও IT দক্ষতা",
+    category: "কম্পিউটার ও IT",
+    instructor: "সারা উইলসন",
     image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$99",
-    duration: "15 hours",
-    level: "Advanced",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳799",
+    duration: "15 ঘন্টা",
+    level: "উন্নত",
     rating: 4.8,
     students: 745,
     featured: true,
   },
   {
     id: 8,
-    title: "Next.js 14 & Modern Fullstack",
-    category: "Web Development",
-    instructor: "Alex Chen",
+    title: "কোচিং ও প্রশিক্ষণ",
+    category: "কোচিং ও প্রশিক্ষণ",
+    instructor: "অ্যালেক্স চেন",
     image:
-      "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    price: "$89",
-    duration: "14 hours",
-    level: "Intermediate",
+      "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    price: "৳899",
+    duration: "14 ঘন্টা",
+    level: "মধ্যবর্তী",
     rating: 4.9,
     students: 1560,
     featured: true,
@@ -118,7 +118,6 @@ const courses = [
 ];
 
 const visibleCourses = ref(8);
-const activeCategory = ref("All");
 </script>
 
 <template>
@@ -137,7 +136,7 @@ const activeCategory = ref("All");
     ></div>
 
     <div class="container mx-auto px-6 relative z-10">
-      <!-- Modern Section Header -->
+      <!-- Section Header -->
       <div class="text-center mb-16">
         <div
           class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm text-secondary rounded-full text-sm font-medium mb-6 shadow-sm"
@@ -147,24 +146,23 @@ const activeCategory = ref("All");
               d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
             />
           </svg>
-          Premium Learning Experience
+          সেরা অনলাইন কোর্স
         </div>
         <h2
           class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
         >
-          Expand Your
+          আপনার জ্ঞান সম্প্রসারণ করুন
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary"
-            >Knowledge</span
+            >শিখুন</span
           >
         </h2>
         <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Hand-picked courses from industry experts to accelerate your career
-          growth and skill development.
+          শিল্প বিশেষজ্ঞদের হাতে নির্বাচিত কোর্সগুলো আপনার দক্ষতা বৃদ্ধি এবং ক্যারিয়ার উন্নয়নের জন্য।
         </p>
       </div>
 
-      <!-- Courses Grid with CourseCard Components -->
+      <!-- Courses Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         <CourseCard
           v-for="course in courses.slice(0, visibleCourses)"
@@ -179,7 +177,7 @@ const activeCategory = ref("All");
         <button
           class="px-8 py-4 bg-secondary text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
         >
-          Load More Courses
+          আরও কোর্স দেখুন
         </button>
       </div>
     </div>

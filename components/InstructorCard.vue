@@ -49,7 +49,7 @@
             {{ instructor.coursesCount }}+
           </div>
           <div class="text-xs text-gray-500 uppercase tracking-wide">
-            Courses
+            কোর্স
           </div>
         </div>
         <div class="text-center">
@@ -57,7 +57,7 @@
             {{ Math.floor(instructor.studentsCount / 1000) }}K+
           </div>
           <div class="text-xs text-gray-500 uppercase tracking-wide">
-            Students
+            শিক্ষার্থী
           </div>
         </div>
       </div>
@@ -101,10 +101,11 @@ const props = defineProps({
   },
 });
 
+// সোশ্যাল শেয়ার ফাংশন
 const shareOnFacebook = () => {
   const url = encodeURIComponent(window.location.href);
   const text = encodeURIComponent(
-    `Check out ${props.instructor.name}'s profile!`
+    `${props.instructor.name}-এর প্রোফাইল দেখুন!`
   );
   window.open(
     `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`,
@@ -114,7 +115,7 @@ const shareOnFacebook = () => {
 
 const shareOnTwitter = () => {
   const text = encodeURIComponent(
-    `Check out ${props.instructor.name}'s profile! Amazing instructor in ${props.instructor.category}`
+    `${props.instructor.name}-এর প্রোফাইল দেখুন! অসাধারণ প্রশিক্ষক ${props.instructor.category} এ।`
   );
   const url = encodeURIComponent(window.location.href);
   window.open(
@@ -132,12 +133,11 @@ const shareOnLinkedIn = () => {
 };
 
 const shareOnInstagram = () => {
-  // Instagram doesn't support direct sharing, so we'll copy profile link
   const profileLink = `${
     window.location.href
   }/instructor/${props.instructor.name.toLowerCase().replace(/\s+/g, "-")}`;
   navigator.clipboard.writeText(profileLink).then(() => {
-    alert("Profile link copied to clipboard! You can share it on Instagram.");
+    alert("প্রোফাইল লিংক ক্লিপবোর্ডে কপি হয়েছে! এটি ইনস্টাগ্রামে শেয়ার করতে পারেন।");
   });
 };
 </script>
